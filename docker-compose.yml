@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bot:
+    # 使用nonebot/nb-cli:latest镜像
+    build: .
+    # 以交互模式运行
+    ports:
+      - "8080:8080"
+    # 挂载当前目录到容器的/workspaces目录
+    volumes:
+      - ./eval:/workspaces
+    # 容器退出后自动移除
+    restart: "no"
+    # 指定容器启动时运行的命令
