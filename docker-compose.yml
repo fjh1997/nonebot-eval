@@ -11,5 +11,15 @@ services:
     volumes:
       - ./eval:/workspaces
     # 容器退出后自动移除
-    restart: "no"
+    restart: "always"
     # 指定容器启动时运行的命令
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
+          pids: 256
+   # 只有限制swap和内存一样docker才会kill
+    memswap_limit: 500M
+    ulimits:
+      nproc: 256
