@@ -1,4 +1,15 @@
 # nonebot-eval
+## 使用方法
+```
+https://github.com/fjh1997/nonebot-eval.git
+cd nonebot-eval
+docker compose up -d 
+```
+然后启动lagrange-onebot即可
+```
+./Lagrange.OneBot
+```
+
 
 ## 示例
 发送
