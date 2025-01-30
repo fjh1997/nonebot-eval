@@ -3,7 +3,9 @@
 ```
 https://github.com/fjh1997/nonebot-eval.git
 cd nonebot-eval
-docker compose up -d 
+#启动守护进程
+sudo python3 watchdog.py 
+sudo docker compose up -d 
 ```
 然后启动![lagrange-onebot](https://github.com/LagrangeDev/Lagrange.Core)即可
 ```
